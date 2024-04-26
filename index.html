@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Prajakta Mestry Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Prajakta Mestry</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume & Experience</span></a></li>
+	          <!-- <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li> -->
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+				<div  style="width: 600px;
+				background-size: cover;
+				background-position: center;
+				overflow: hidden; height: 600px; background-image: url(images/meanimg.png);"> 
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello, Welcome to my Portfolio!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Prajakta Mestry</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'MEAN Stack Developer',
+						'Angular',
+						'Javascript',
+						'Node Js',
+						'Express Js',
+						'SQL',
+                        'MongoDB'
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+							<p><a href="https://drive.google.com/file/d/1tmlk0Ls_9gYxv-TjRYB6ZnAMTw8Y00oJ/view?usp=drive_link" class="btn btn-primary py-3 px-3">Download CV</a></p>
+							<p><a href="https://www.linkedin.com/in/prajakta-mestry-b009431a9/" class="btn btn-primary py-3 px-4">LinkedIn</a>  
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row" style="margin-top: 1%;">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-11">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Prajakta Mestry</span></p>
+										<p><span class="title-s">Job Role: </span> <span>SOFTWARE DEVELOPER</span></p>
+										<p><span class="title-s">Experience: </span> <span>2 Years</span></p>
+										<p><span class="title-s">Address: </span> <span>Mumbai, Maharashtra, India</span></p>
+									  </div>
+									</div>
+									<div class="col-sm-6 col-md-1">
+										<!-- <div class="about-img">
+										  <img src="images/me.png" class="img-fluid rounded b-shadow-a" alt="">
+										</div> -->
+									  </div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>Angular</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Node Js</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>SQL</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>MongoDB</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Express JS</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>Welcome to my portfolio website! I'm an experienced and talented software developer, with a degree in BSc
+									(IT) from Mumbai University. I specialize in web development (mostly backend
+									and/or full-stack), with a focus on Angular and JavaScript/Node.js where I have a
+									lot of experience.
+									Full Stack Developer with a proven record of building robust and highperforming applications from scratch. Utilized Node.js and Express.js to improve
+									the backend. MEAN Stack Developer.
+									I am pursuing a Master of Computer Applications (MCA) is a 2-year professional
+									degree course.
+								</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>SOFTWARE DEVELOPER</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>Angular, Node.js, JavaScript, Express.js, MongoDB, MySql, Docker, &amp; Keycloak</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Marathi</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Travelling, Reading</span></li>							
+								</ul>
+							</div>
+						</div>
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p><a href="https://www.linkedin.com/in/prajakta-mestry-b009431a9/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Full Stack Developer with 2 years of experience can provide you with a solid foundation in both front-end and back-end development.</p>
+			<div class="row justify-content-center mt-5">
+				<div class="col-md-6 text-center ftco-animate">
+					<p><a href="https://drive.google.com/file/d/1tmlk0Ls_9gYxv-TjRYB6ZnAMTw8Y00oJ/view?usp=drive_link" class="btn btn-primary py-3 px-3">Download CV</a></p>
+				</div>
+			</div>
+          </div>
+        </div>
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">March 2022 – June 2022</span>
+						<h2>Edulab Exchange PVT LIT Intern</h2>
+						<span class="position">SOFTWARE DEVELOPER</span>
+						<p class="mt-4">Learning all the development related tasks .</p>
+						    <ul>
+								<li>Node.js Essential Training Learn NVM (Node version Manager) or n, Async and await</li>
+								<li>Practice Express with sample helloworld Practice express.Router Learn Techniques using postman post and get.</li>
+								<li>Angular 2+ lynda tutorials Building Angular and Node Apps with Authentication(JWT) Angular forms and validations , Angular routing ,Angular with http</li>
+								<li>Learn file upload on server using multer and GridFS</li>
+							</ul>
+						</p>
+					</div> 
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">JUNE 2022 - Present</span>
+						<h2>Edulab Exchange PVT LIT</h2>
+						<span class="position">JUNIOR SOFTWARE DEVELOPER</span>
+						<p class="mt-4">Working on Learning Management System. Built RESTful APIs that served
+							data to the Angular front-end based on dynamically chosen user inputs that
+							were handled over concurrent users And Javascript, typescript for the Backend.</p>
+							<ul>
+								<li>Built internal tool using Node js</li>
+								<li>Integrated Zoom. To store data, I have been	using MongoDB and SQLIntegrated Zoom. To store data, I have been using MongoDB and SQL.</li>
+								<li>Used Keycloak for authentication. Used Docker to store containers. Reviewed code and conducted testing. For the Front End used Angular and Angular JS.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+		<br>
+		<style>
+			.resume-wrap {
+				height: 100%; /* Adjust this value as needed */
+			}
+		</style>
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2023 - Present</span>
+    					<h2>MCA (Master of Computer Applications)</h2>
+    					<span class="position">Mumbai University</span>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2018 - 2020</span>
+    					<h2>Bachelor of Science in Information Technology (B.Sc IT)</h2>
+    					<span class="position">M.L.Dahanukar College</span>
+    					<p class="mt-4">Grade: 6.70 CGPI</p>
+    				</div>
+				</div>
+    		</div>
+
+    	
+    	</div>
+    </section>
+
+
+    <!-- <section class="ftco-section" id="project-section">
+      <div class="container"> -->
+        <!-- <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the Data Analytics projects on Python, SQL, EDA(Exploratory Data Analysis), Power BI, Advanced Excel & Google Looker Studio.</p>
+          </div>
+        </div> -->
+        <!-- <div class="row d-flex"> -->
+          <!-- <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href=" " class="block-20 zoom-effect" style="background-image: url('images/project1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="  ">Optimization of Fuel Pump Manufacturing Machine Downtime - <u>Internship Project at Innodatatics</u></a></h3>
+                <p>Analyzed and created a dashboard from machine data to identify patterns at time intervals and root causes of unplanned downtime and also suggested to implement proactive maintenance strategies.</p>
+				<p>Tools Used: Exploratory Data Analysis(Python, SQL), Power BI, Advanced Excel(Pivot Tables)</p>
+              </div>
+            </div>
+          </div> -->
+          <!-- <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href=" " class="block-20 zoom-effect" style="background-image: url('images/project2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href=" ">Raw Material(Metals & Minerals) Price Analysis - <u>Internship Project at Innodatatics</u></a></h3>
+                <p>Raw material prices are highly volatile, hence exploratory data analysis was performed, and created a dashboard for proactive management strategies.</p>
+				<p>Tools Used: Exploratory Data Analysis(Python, SQL), Power BI, Google Looker Studio</p>
+              </div>
+            </div>
+          </div> -->
+          <!-- <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/DeekshithKGowda/MeriSKILL-Internship-Sales-Analysis-Project" class="block-20 zoom-effect" style="background-image: url('images/project3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/DeekshithKGowda/MeriSKILL-Internship-Sales-Analysis-Project">Sales Analysis Dashboard using Power BI - <u>Internship Project at MeriSKILL</u></a></h3>
+                <p>Developed a dynamic sales analysis dashboard utilizing Power BI, enabling the visualization of sales trends, top-selling products, and revenue measures.</p>
+				<p>Tools Used: Power BI</p>
+              </div>
+            </div>
+          </div> -->
+        <!-- </div> -->
+	<!-- <br> -->
+		<!-- added justify-content-center to center align the last two projects -->
+		<!-- <div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/DeekshithKGowda/Road-Accident-Analysis-Power-BI" class="block-20 zoom-effect" style="background-image: url('images/project4.jpeg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/DeekshithKGowda/Road-Accident-Analysis-Power-BI">Road Accident Analysis Project</a></h3>
+				  <p>Designed an in depth tracking and analysis report for recurring traffic incidents, and developed a comprehensive tracking and analysis report for recurrent traffic accidents. </p>
+				  <p>Tools Used: Power BI</p>
+				</div>
+			  </div>
+			</div>
+		 </div> -->
+	  <!-- </div>
+	</section> -->
+
+	<!-- <section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="4">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="7">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number"> <a href="https://ieeexplore.ieee.org/document/9915906">1-View Here</a></strong>
+                <span>Research Paper Published</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="7">0</strong>
+                <span>Certifications</span>
+              </div>
+            </div>
+          </div>
+        </div>
+       </div> -->
+	
+	  <!-- <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">  -->
+			<!-- <div class="container"> -->
+				<!-- <div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<p><a href="https://github.com/prajaktaMMestry" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						<br> 	
+						<div class="heading"> 
+							<h3>Since</h3>
+							<h3><b>"No data is clean, but most is useful,"</b></h3>
+							<h3>I enjoy to solve business data problems &amp; uncover hidden data stories.</h3>
+						
+						</div>
+					</div>
+				</div> -->
+			<!-- </div> -->
+		<!-- </div> -->
+	<!-- </section>  -->
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<!-- <div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p><a href="https://www.google.com/maps">Mumbai, India</a></p>
+	          </div> -->
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:prajumm0607@gmail.com">prajumm0607@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/12iJAtRoYwWte2ghWtjr99ngT9qeihtfL/view?usp=sharing">Click Here</a></p>
+	          </div>
+          </div>
+		  <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+			<!-- <div class="align-self-stretch box p-4 text-center">
+				<div class="icon d-flex align-items-center justify-content-center">
+					<span class="icon-phone2"></span>
+				</div>
+				<h3 class="mb-4">Contact Number</h3>
+			  <p><a href="tel://000000000">+91 0000000000</a></p>
+			</div> -->
+		</div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<!-- <div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question? </span> <a href="https://docs.google.com/forms" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div> -->
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on </li>
+					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/"><span class="icon-youtube"></span></a></li> -->
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/prajakta-mestry-b009431a9/"><span class="icon-linkedin"></span></a></li>  
+					  <!-- <li class="ftco-animate"><a href="https://twitter.com/"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://twitter.com/"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com//"><span class="icon-instagram"></span></a></li> -->
+					  <li class="ftco-animate"><a href="https://github.com/prajaktaMMestry"><span class="icon-github"></span></a></li>  
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section> 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> Prajakta Mestry | All rights reserved.</p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
